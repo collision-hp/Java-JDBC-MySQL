@@ -1,6 +1,6 @@
 
 import java.sql.*;
-public class myDatabase {
+public class createNconnect {
     public static void main(String[] args) throws ClassNotFoundException{
 
         String url="jdbc:mysql://localhost:3306/myDatabase";
@@ -18,6 +18,7 @@ public class myDatabase {
             Connection conn=DriverManager.getConnection(url, username, password);
             System.out.println("Connection Established Successfully");
             Statement stmt=conn.createStatement();
+            //to retreive data
             ResultSet rs=stmt.executeQuery(query);
             //data retrieval
             while(rs.next()){
